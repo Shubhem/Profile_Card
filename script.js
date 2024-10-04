@@ -43,3 +43,16 @@ let count = 0;
             count++;
             counter.innerHTML = `${count}`;
         }
+
+        // Get the Gmail icon element
+        const gmailIcon = document.getElementById('gmailIcon');
+
+        // Define the recipient email
+        const recipientEmail = 'youremail@mail.com';  // REPLACE THIS WITH THE ACTUAL EMAIL ID
+
+        // Add click event listener to the Gmail icon
+        gmailIcon.addEventListener('click', function ()
+        {
+        // Open Gmail's compose window with the recipient email pre-filled
+        window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}`, '_blank');
+        });
