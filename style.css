@@ -172,3 +172,67 @@ body {
     font-size: 14px;
     color: #777;
 }
+
+.heart_container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 5%;
+    width: 90%;
+    position: relative;
+}
+
+.heart-icon {
+    width: 20px;
+    margin-right: 5px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.counter {
+    font-size: 3vh;
+    color: #211111;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    animation: moveUp 2s ease-out forwards;
+    pointer-events: none; /* Prevents the hearts from interfering with mouse events */
+}
+
+@keyframes moveUp {
+    0% {
+        opacity: 1;
+        transform: translate3d(-50%, 0, 0) scale(1);
+        top: 50%;
+        left: 0;
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(var(--x), var(--y), var(--z)) scale(2);
+    }
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.text {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+}
+
+.name_heartimg {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    gap: 5px;
+}
